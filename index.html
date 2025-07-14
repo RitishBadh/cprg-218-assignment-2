@@ -14,6 +14,7 @@
   <!-- Navigation -->
   <nav class="navbar">
     <h1>SimpleShop</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#products">Products</a></li>
@@ -49,8 +50,10 @@
  
   <!-- Embedded Video -->
   <section id="video">
-    <h3>How to Shop</h3>
-    <iframe width="300" height="200" src="https://www.youtube.com/embed/gh3L1wPOpyk" allowfullscreen></iframe>
+   <h3>How to Shop</h3>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/gh3L1wPOpyk" allowfullscreen></iframe>
+  </div>
   </section>
  
   <!-- Footer -->
@@ -58,7 +61,14 @@
     <p>Contact us at support@simpleshop.com</p>
     <p>&copy; 2025 SimpleShop</p>
   </footer>
- 
+  
+ <script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show');
+  }
+</script>
+
 </body>
 </html>
  
